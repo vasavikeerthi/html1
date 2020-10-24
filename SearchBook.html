@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    </head>
+    <body>
+        <div class = "container">
+            <h1 class="text-success text-center">Search Book </h1><br>
+            <form name = "myForm">
+
+                
+    
+                <div class = "form-group">
+                <label for = "title">Title : </label>
+                <input type = "text" class = "form-control" id="title" placeholder = "Enter title" name = "title" required><br/>
+                </div>
+                <div class = "form-group">
+                <label for = "author">Author : </label>
+                <input type = "text" class = "form-control" id ="author" placeholder = "Enter Author" name = "author"><br/>
+                </div>
+    
+               
+    
+                <button onclick = "validate()">Search</button>
+
+            </form>
+            </div>
+            <script>
+                function validate(){
+                
+                    var title =document.myForm.title.value;
+                    var author =document.myForm.author.value;
+                    
+                    
+               if(title==""||author==""){
+                   alert("Fields should not be empty");
+               }
+               else
+               {
+                   alert("Your Book is Found yahooo...enjoy reading!");
+               }
+               
+                }
+            </script>
+    </body>
+    <p> Go to home page</p><a href="index.html">Home page</a>
+</html>

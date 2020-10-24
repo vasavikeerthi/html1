@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    
+    </head> 
+    <body>
+        <div class = "container">
+            <h1 class="text-success text-center">Add Book Details</h1><br>
+            <form name = "myForm">
+
+                <div class = "form-group">
+                <label for = "id">ID : </label>
+                <input type = "number" class = "form-control" id="id" placeholder = "Enter id" name = "id" required><br/>
+                </div>
+    
+                <div class = "form-group">
+                <label for = "title">Title : </label>
+                <input type = "text" class = "form-control" id="title" placeholder = "Enter title" name = "title" required><br/>
+                </div>
+                <div class = "form-group">
+                <label for = "author">Author : </label>
+                <input type = "text" class = "form-control" id="author"placeholder = "Enter Author" name = "author"><br/>
+                </div>
+    
+                <div class = "form-group">
+                <label for = "price">Price : </label>
+                <input type = "number" class = "form-control" id="price" placeholder = "enter price" name = "price"><br/>
+                </div>
+    
+               <div class= "form-group">
+                    <label for ="genre">Genre : </label>
+                    <select class = "form-control"  name="genre" id="genre"required>
+                        <option>Select genre</option>
+                        <option>AutoBiograpghy</option>
+                        <option>Romantic</option>
+                        <option>Crime</option>
+                        <option>Kids</option>
+                    </select></br>
+                </div>
+                <div class="form-group">
+                <label for="start">Enter date *:</label>
+    <input type ="date" id="date" name="trip-start"
+    value="2018-07-22" min="2018-01-01" max="2020-10-25"></br>
+                 </div>     
+    <button onclick = "validate()">Add</button>
+
+            </form>
+            </div>
+            <script>
+                function validate(){
+                    var id =document.myForm.id.value;
+                    var title =document.myForm.title.value;
+                    var author =document.myForm.author.value;
+                    var price =document.myForm.price.value;
+                    var genre =document.myForm.genre.value;
+                    var date =document.myForm.date.value;
+                    
+               if(id==""||title==""||author==""||price==""||genre==""||date=="")
+               {
+                alert("Fields should not be empty");
+               }
+               else
+               {
+                alert("Book Added Successfully..!");
+               
+               }
+            }
+            </script>
+    </body>
+    <p> Go to home page</p><a href="index.html">Home page</a>
+</html>

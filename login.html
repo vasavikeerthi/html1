@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class = "container">
+            <h1 class="text-success text-center"> login Here</h1><br>
+ 
+        <form name = "myForm">
+
+            
+            
+            
+
+            <div class = "form-group">
+            <label for = "email">username : </label>
+            <input type = "text" class = "form-control" placeholder = "Enter your e-mail address" name = "email"><br/>
+            </div>
+
+            <div class = form-group">
+            <label for = "password1">Password : </label>
+            <input type = "password" class = "form-control" placeholder = "Please set a password" name = "password1"><br/>
+            </div>
+            
+
+
+            <button onclick = "validate()">Login</button>
+
+        </form>
+        </div>
+        <script>
+            function validate() {
+                var x = document.myForm.email.value;
+                var ap = x.indexOf("@");
+                var dp = x.lastIndexOf(".");
+                var pw1 = document.myForm.password1.value;
+                
+                if (ap < 1 || dp < ap + 2 || dp + 2 >= x.length) {
+                    alert("Please enter a valid email address");
+                    return false;
+                }
+               else{
+               if(x==""||pw1=="")
+               alert("Fields should not be empty");
+               else{
+                   if(x=="kanna1@gmail.com"&& pw1=="kvk@2206")
+                   alert("logged in");
+                   else{
+                       alert("invalid credentials");
+                   }
+               }
+               
+               
+               }
+                
+            }
+        </script>
+    </body>
+    <p> Go to home page</p><a href="index.html">Home page</a>
+</html>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title> JavaScript Demo Form </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    </head>
+    <body>
+        <div class = "container">
+            <h1 class="text-success text-center">Register Here</h1><br>
+ 
+        <form name = "myForm">
+
+            <div class = "form-group">
+            <label for = "name">Name : </label>
+            <input type = "text" class = "form-control" placeholder = "Enter your name" name = "name" required><br/>
+            </div>
+
+            <div class = "form-group">
+            <label for = "age">Age : </label>
+            <input type = "number" class = "form-control" placeholder = "Enter your age" name = "age" required><br/>
+            </div>
+
+            <div class = "form-group">
+                <label for ="gender">Gender : </label>
+                <select class = "form-control" required>
+                    <option>Select your gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            
+            <div class = "form-group">
+            <label for = "email">Email : </label>
+            <input type = "text" class = "form-control" placeholder = "Enter your e-mail address" name = "email"><br/>
+            </div>
+
+            <div class = form-group">
+            <label for = "password1">Password : </label>
+            <input type = "password" class = "form-control" placeholder = "Please set a password" name = "password1"><br/>
+            </div>
+
+            <div class = "form-group">
+            <label for = "password2">Confirm Password : </label>
+            <input type = "password" class = "form-control" placeholder = "Please confirm your password" name = "password2"><br/>
+            </div>
+
+            <button onclick = "validate()">Register</button>
+
+        </form>
+        </div>
+        <script>
+            function validate() {
+                var x = document.myForm.email.value;
+                var ap = x.indexOf("@");
+                var dp = x.lastIndexOf(".");
+                var pw1 = document.myForm.password1.value;
+                var pw2 = document.myForm.password2.value;
+
+                if (ap < 1 || dp < ap + 2 || dp + 2 >= x.length) {
+                    alert("Please enter a valid email address");
+                    return false;
+                }
+                else if (pw1.length < 6) {
+                    alert("Please set a password having more than 6 characters");
+                }
+                else if (pw1 != pw2) {
+                    alert("Password mis-match");
+                }
+                else {
+                    alert("Successfully registered!!!");
+                }
+            }
+        </script>
+    </body>
+    <p> Go to home page</p><a href="index.html">Home page</a>
+</html>
